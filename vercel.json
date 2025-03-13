@@ -1,8 +1,11 @@
 {
     "version": 2,
+    "builds": [
+        {"src": "api/product/*.py", "use": "@vercel/python"}
+    ],
     "functions": {
         "api/*.py": {
-            "runtime": "python@3.9"
+            "runtime": "@vercel/python"
         }
     }
 }
