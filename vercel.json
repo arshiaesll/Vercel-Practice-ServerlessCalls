@@ -10,6 +10,10 @@
         {
             "src": "/home",
             "dest": "/api/index.py"
+        },
+        {
+            "src": "/pdf_extractor",
+            "dest": "/api/func_pdf_extractor.py"
         }
 
     ]

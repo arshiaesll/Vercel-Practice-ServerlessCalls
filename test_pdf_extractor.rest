@@ -1,0 +1,39 @@
+### Test PDF Extractor API - Basic POST Request
+POST http://localhost:3000/pdf_extractor
+Content-Type: application/json
+
+{
+  "message": "Hello, this is a test request",
+  "test_data": true
+}
+
+### Test PDF Extractor API with Form Data
+POST http://localhost:3000/api/func_pdf_extractor
+Content-Type: application/x-www-form-urlencoded
+
+message=Hello%20from%20form%20data&test_data=true
+
+### Test PDF Extractor API with Multipart Form Data
+# Note: This is a simplified example. Actual file uploads would require a proper REST client
+POST http://localhost:3000/api/func_pdf_extractor
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="message"
+
+This is a test message in multipart form
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="test_data"
+
+true
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### Test PDF Extractor API - Production URL
+# Use this when deployed to Vercel
+POST https://your-vercel-app-name.vercel.app/api/func_pdf_extractor
+Content-Type: application/json
+
+{
+  "message": "Hello from production",
+  "test_data": true
+} 
